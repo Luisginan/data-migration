@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using OneLonDataMigration.Models;
 
 namespace OneLonDataMigration.Db;
 

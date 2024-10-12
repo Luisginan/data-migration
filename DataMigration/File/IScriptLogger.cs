@@ -1,4 +1,6 @@
-﻿namespace OneLonDataMigration;
+﻿using OneLonDataMigration.Models;
+
+namespace OneLonDataMigration.File;
 
 public interface IScriptLogger
 {

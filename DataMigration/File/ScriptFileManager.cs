@@ -1,4 +1,6 @@
-﻿namespace OneLonDataMigration;
+﻿using OneLonDataMigration.Models;
+
+namespace OneLonDataMigration.File;
 
 public class ScriptFileManager(Config config) : IScriptFileManager
 {
@@ -12,7 +14,7 @@ public class ScriptFileManager(Config config) : IScriptFileManager
             {
                 FullName = file,
                 ScriptName = Path.GetFileName(file),
-                ScriptContent = File.ReadAllText(file)
+                ScriptContent = System.IO.File.ReadAllText(file)
             };
             fileScript.OrderNumber = int.Parse(fileScript.ScriptName.Split(' ')[0].Replace('.', ' ').Trim());
             fileScript.version = fileScript.ScriptName.Split(' ')[2].Replace(".sql", "").Trim();

@@ -1,4 +1,7 @@
-﻿namespace OneLonDataMigration;
+﻿using OneLonDataMigration.File;
+using OneLonDataMigration.Models;
+
+namespace OneLonDataMigration.Db;
 
 public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileManager) : IScriptManager
 {

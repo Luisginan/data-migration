@@ -1,23 +1,34 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
 
-namespace OneLonDataMigration;
+namespace OneLonDataMigration.File;
 
 public class ConfigReader
 {
+    private readonly JsonSerializerSettings _jsonSerializerSettings;
+
+    public ConfigReader()
+    {
+        _jsonSerializerSettings = new JsonSerializerSettings
+        {
+            Formatting = Formatting.Indented,
+            NullValueHandling = NullValueHandling.Ignore
+        };
+    }
+
     public Config ReadConfigFromJson()
     {
-        if (!File.Exists("config.json"))
+        if (!System.IO.File.Exists("config.json"))
         {
             var newFile = new Config
             {
                 PathScripts = "C:\\Scripts",
                 ConnectionString = "Server=localhost;Port=5432;Database=postgres;User Id=postgres;Password=postgres;"
             };
-            File.WriteAllText("config.json", JsonSerializer.Serialize(newFile));
+            System.IO.File.WriteAllText("config.json", JsonConvert.SerializeObject(newFile, _jsonSerializerSettings));
             throw new Exception("File json not found, it will generated one for sample");
         }
-        var json = File.ReadAllText("config.json");
-        var config= JsonSerializer.Deserialize<Config>(json);
+        var json = System.IO.File.ReadAllText("config.json");
+        var config = JsonConvert.DeserializeObject<Config>(json, _jsonSerializerSettings);
         if (config == null)
         {
             throw new Exception("Failed deserialize config");

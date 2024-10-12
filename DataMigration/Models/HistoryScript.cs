@@ -1,4 +1,4 @@
-﻿namespace OneLonDataMigration;
+﻿namespace OneLonDataMigration.Models;
 
 public class HistoryScript
 {
