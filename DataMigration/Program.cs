@@ -7,11 +7,13 @@ try
 {
     var configReader = new ConfigReader();
     var config = configReader.ReadConfigFromJson();
-    
+
+    var env = config.ConnectionString.Split(";").Where(x => !x.ToLower().Contains("Password".ToLower())).Aggregate((x, y) => x + ";" + y);    
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine(config.GreetingTitle);
     Console.WriteLine("Version " + typeof(Program).Assembly.GetName().Version); 
     Console.WriteLine("Developed by OneLoan Team");
+    Console.WriteLine("Env : " + env);
     Console.WriteLine("====================================");
     Console.ResetColor();
 
