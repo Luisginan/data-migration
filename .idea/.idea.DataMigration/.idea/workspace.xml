@@ -7,13 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f721398-7bb7-4591-a94d-14109ec7e922" name="Changes" comment="add command estetik">
+    <list default="true" id="7f721398-7bb7-4591-a94d-14109ec7e922" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Config.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/IScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IScriptFileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +62,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.DataMigration">
+  <component name="RunManager" selected="Publish to folder.Publish DataMigration to folder">
     <configuration name="Publish DataMigration to folder (1)" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" include_all_content_for_self_extract="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/win-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
       <method v="2" />
@@ -119,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728743462074</updated>
       <workItem from="1728743464060" duration="6585000" />
-      <workItem from="1728794683519" duration="2100000" />
+      <workItem from="1728794683519" duration="2651000" />
     </task>
     <task id="LOCAL-00001" summary="add env">
       <option name="closed" value="true" />
@@ -161,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728795427040</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add minimum order number">
+      <option name="closed" value="true" />
+      <created>1728829717118</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728829717118</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +179,8 @@
     <MESSAGE value="fixing struktur data and file" />
     <MESSAGE value="add rider setting" />
     <MESSAGE value="add command estetik" />
-    <option name="LAST_COMMIT_MESSAGE" value="add command estetik" />
+    <MESSAGE value="add minimum order number" />
+    <option name="LAST_COMMIT_MESSAGE" value="add minimum order number" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

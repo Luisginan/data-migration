@@ -1,5 +1,6 @@
 ﻿using OneLonDataMigration.Db;
 using OneLonDataMigration.File;
+using OneLonDataMigration.Models;
 
 namespace OneLonDataMigration;
 
@@ -22,15 +23,16 @@ public class ScriptExecutor(IScriptManager scriptManager,IScriptLogger scriptLog
         Console.Write("Execute all new script (Y/N) ?");
         Console.ResetColor();
         var key = Console.ReadKey();
+        var listScriptExecuted = new List<ScriptData>();
         if (key.Key == ConsoleKey.Y)
         {
             Console.WriteLine();
-            var listScriptData = scriptManager.ExecuteAllScripts(listScriptDif);
-            if (listScriptData.Any(x => x.isErrored))
+            listScriptExecuted = scriptManager.ExecuteAllScripts(listScriptDif);
+            if (listScriptExecuted.Any(x => x.isErrored))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Some script is errored");
-                foreach (var scriptData in listScriptData.Where(x => x.isErrored))
+                foreach (var scriptData in listScriptExecuted.Where(x => x.isErrored))
                 {
                     Console.WriteLine($"Script {scriptData.ScriptName} is errored with message {scriptData.ErrorMessage}");
                 }
@@ -47,6 +49,6 @@ public class ScriptExecutor(IScriptManager scriptManager,IScriptLogger scriptLog
             Console.WriteLine("Abort executing all new script");
         }
         
-        scriptLogger.LogScript(listScriptDif);
+        scriptLogger.LogScript(listScriptExecuted);
     }
 }
