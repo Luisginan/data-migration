@@ -8,7 +8,8 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
     public List<ScriptData> GetDiffScripts()
     {
         var historyScripts = dbClient.GetHistoryScripts();
-        var fileScripts = scriptFileManager.GetFileScripts();
+        var lastOrderNumber = historyScripts.Any() ? historyScripts.Max(x => x.OrderNumber) : 0;
+        var fileScripts = scriptFileManager.GetFileScripts(lastOrderNumber);
         var listScriptDif = new List<ScriptData>();
         foreach (var fileScript in fileScripts)
         {

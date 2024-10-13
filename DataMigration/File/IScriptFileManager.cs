@@ -4,5 +4,5 @@ namespace OneLonDataMigration.File;
 
 public interface IScriptFileManager
 {
-    List<FileScript> GetFileScripts();
+    List<FileScript> GetFileScripts(int lastOrderNumber);
 }

@@ -7,10 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f721398-7bb7-4591-a94d-14109ec7e922" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DataMigration/Scripts/3. insert_messaging_log V1.1.sql" afterDir="false" />
+    <list default="true" id="7f721398-7bb7-4591-a94d-14109ec7e922" name="Changes" comment="add command estetik">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Config.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/File/IScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IScriptFileManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728743462074</updated>
       <workItem from="1728743464060" duration="6585000" />
-      <workItem from="1728794683519" duration="455000" />
+      <workItem from="1728794683519" duration="2100000" />
     </task>
     <task id="LOCAL-00001" summary="add env">
       <option name="closed" value="true" />
@@ -150,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728794193972</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add command estetik">
+      <option name="closed" value="true" />
+      <created>1728795427040</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728795427040</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,20 +175,21 @@
     <MESSAGE value="fix json" />
     <MESSAGE value="fixing struktur data and file" />
     <MESSAGE value="add rider setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="add rider setting" />
+    <MESSAGE value="add command estetik" />
+    <option name="LAST_COMMIT_MESSAGE" value="add command estetik" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs</url>
-          <line>12</line>
+          <line>13</line>
           <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\Db\ScriptManager.cs" containingFunctionPresentation="Method 'GetDiffScripts'">
             <startOffsets>
-              <option value="438" />
+              <option value="550" />
             </startOffsets>
             <endOffsets>
-              <option value="477" />
+              <option value="589" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -197,13 +209,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs</url>
-          <line>22</line>
+          <line>14</line>
           <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\File\ScriptFileManager.cs" containingFunctionPresentation="Method 'GetFileScripts'">
             <startOffsets>
-              <option value="811" />
+              <option value="442" />
             </startOffsets>
             <endOffsets>
-              <option value="866" />
+              <option value="497" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
