@@ -7,9 +7,9 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
 {
     public List<ScriptData> GetDiffScripts()
     {
-        List<HistoryScript> historyScripts = dbClient.GetHistoryScripts();
-        List<FileScript> fileScripts = scriptFileManager.GetFileScripts();
-        List<ScriptData> listScriptDif = new List<ScriptData>();
+        var historyScripts = dbClient.GetHistoryScripts();
+        var fileScripts = scriptFileManager.GetFileScripts();
+        var listScriptDif = new List<ScriptData>();
         foreach (var fileScript in fileScripts)
         {
             if (historyScripts.All(x => x.ScriptName != fileScript.ScriptName))
@@ -37,7 +37,7 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
 
     public List<ScriptData> ExecuteAllScripts(List<ScriptData> listScriptDif)
     {
-        List<ScriptData> listScriptExecuted = new List<ScriptData>();
+        var listScriptExecuted = new List<ScriptData>();
         foreach (var scriptData in listScriptDif)
         {
             try

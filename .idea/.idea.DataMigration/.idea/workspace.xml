@@ -7,20 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f721398-7bb7-4591-a94d-14109ec7e922" name="Changes" comment="fix json">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources/836399c9-8604-4f42-920c-00c1a205b23b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources/836399c9-8604-4f42-920c-00c1a205b23b.xml" afterDir="false" />
+    <list default="true" id="7f721398-7bb7-4591-a94d-14109ec7e922" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DataMigration/Scripts/3. insert_messaging_log V1.1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Models/FileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/FileScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Models/HistoryScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/HistoryScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Models/ScriptData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/ScriptData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Scripts/1. select_1 V1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Scripts/1. select_1 V1.1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Scripts/2. select_2 V1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Scripts/2. select_2 V1.2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/table.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,44 +27,44 @@
     <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/File/ConfigReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2nLDSC9p6rYxH9zBf921pbqEOzF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.DataMigration.executor": "Run",
-    "Publish to folder.Publish DataMigration to folder (1).executor": "Run",
-    "Publish to folder.Publish DataMigration to folder (2).executor": "Run",
-    "Publish to folder.Publish DataMigration to folder (3).executor": "Run",
-    "Publish to folder.Publish DataMigration to folder.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.DataMigration.executor&quot;: &quot;Run&quot;,
+    &quot;Publish to folder.Publish DataMigration to folder (1).executor&quot;: &quot;Run&quot;,
+    &quot;Publish to folder.Publish DataMigration to folder (2).executor&quot;: &quot;Run&quot;,
+    &quot;Publish to folder.Publish DataMigration to folder (3).executor&quot;: &quot;Run&quot;,
+    &quot;Publish to folder.Publish DataMigration to folder.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Publish to folder.Publish DataMigration to folder">
+}</component>
+  <component name="RunManager" selected=".NET Project.DataMigration">
     <configuration name="Publish DataMigration to folder (1)" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" include_all_content_for_self_extract="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/win-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
       <method v="2" />
@@ -125,7 +115,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728743462074</updated>
-      <workItem from="1728743464060" duration="6117000" />
+      <workItem from="1728743464060" duration="6585000" />
+      <workItem from="1728794683519" duration="455000" />
     </task>
     <task id="LOCAL-00001" summary="add env">
       <option name="closed" value="true" />
@@ -143,7 +134,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728745469379</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixing struktur data and file">
+      <option name="closed" value="true" />
+      <created>1728794174949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728794174949</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add rider setting">
+      <option name="closed" value="true" />
+      <created>1728794193972</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728794193972</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +162,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add env" />
     <MESSAGE value="fix json" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix json" />
+    <MESSAGE value="fixing struktur data and file" />
+    <MESSAGE value="add rider setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="add rider setting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -165,10 +174,10 @@
           <line>12</line>
           <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\Db\ScriptManager.cs" containingFunctionPresentation="Method 'GetDiffScripts'">
             <startOffsets>
-              <option value="480" />
+              <option value="438" />
             </startOffsets>
             <endOffsets>
-              <option value="519" />
+              <option value="477" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -181,7 +190,7 @@
               <option value="265" />
             </startOffsets>
             <endOffsets>
-              <option value="331" />
+              <option value="315" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
