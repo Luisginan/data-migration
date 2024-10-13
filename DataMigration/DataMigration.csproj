@@ -18,10 +18,10 @@
       <Content Include="config.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <None Update="Scripts\1. select_1 V1.sql">
+      <None Update="Scripts\1. select_1 V1.1.sql">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="Scripts\2. select_2 V1.sql">
+      <None Update="Scripts\2. select_2 V1.2.sql">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

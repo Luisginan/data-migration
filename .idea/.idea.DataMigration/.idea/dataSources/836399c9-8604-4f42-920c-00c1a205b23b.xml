@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>21674</IntrospectionStateNumber>
+      <IntrospectionStateNumber>21701</IntrospectionStateNumber>
       <ServerVersion>16.4</ServerVersion>
       <StartupTime>1728737015</StartupTime>
       <TimeZones>true ACDT
@@ -1407,7 +1399,7 @@ true posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>21674</IntrospectionStateNumber>
+      <IntrospectionStateNumber>21701</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4835,8 +4827,8 @@ true posixrules
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>21674</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-10-12.14:54:19</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>21701</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-10-13.02:20:52</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4858,10 +4850,10 @@ true posixrules
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="268" parent="265" name="script_history_id_seq">
-      <ObjectId>46463</ObjectId>
+      <ObjectId>46472</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>21648</StateNumber>
+      <StateNumber>21700</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
@@ -4878,8 +4870,8 @@ true posixrules
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="271" parent="265" name="script_history">
-      <ObjectId>46464</ObjectId>
-      <StateNumber>21648</StateNumber>
+      <ObjectId>46473</ObjectId>
+      <StateNumber>21700</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -5030,61 +5022,75 @@ true posixrules
       <DefaultExpression>nextval(&apos;script_history_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>21648</StateNumber>
+      <StateNumber>21700</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>46463</SequenceId>
+      <SequenceId>46472</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="295" parent="271" name="order_number">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>21648</StateNumber>
+      <StateNumber>21700</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="296" parent="271" name="script_name">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>21648</StateNumber>
+      <StateNumber>21700</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="297" parent="271" name="script_content">
+    <column id="297" parent="271" name="script_file_name">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>21648</StateNumber>
+      <StateNumber>21700</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="298" parent="271" name="script_version">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>21700</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="299" parent="271" name="script_content">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>21700</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="298" parent="271" name="script_status">
+    <column id="300" parent="271" name="script_status">
       <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>21648</StateNumber>
+      <Position>7</Position>
+      <StateNumber>21700</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="299" parent="271" name="script_time">
+    <column id="301" parent="271" name="script_time">
       <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StateNumber>21648</StateNumber>
+      <Position>8</Position>
+      <StateNumber>21700</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="300" parent="271" name="script_history_pkey">
+    <index id="302" parent="271" name="script_history_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>46470</ObjectId>
+      <ObjectId>46479</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>21648</StateNumber>
+      <StateNumber>21700</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="301" parent="271" name="script_history_pkey">
+    <key id="303" parent="271" name="script_history_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>46471</ObjectId>
+      <ObjectId>46480</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>21648</StateNumber>
-      <UnderlyingIndexId>46470</UnderlyingIndexId>
+      <StateNumber>21700</StateNumber>
+      <UnderlyingIndexId>46479</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

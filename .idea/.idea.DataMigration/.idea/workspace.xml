@@ -7,23 +7,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f721398-7bb7-4591-a94d-14109ec7e922" name="Changes" comment="add env">
+    <list default="true" id="7f721398-7bb7-4591-a94d-14109ec7e922" name="Changes" comment="fix json">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources/836399c9-8604-4f42-920c-00c1a205b23b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources/836399c9-8604-4f42-920c-00c1a205b23b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/IDbClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/IDbClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/IScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/IScriptManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/ConfigReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ConfigReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/IScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IScriptFileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/IScriptLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IScriptLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Models/FileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/FileScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Models/HistoryScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/HistoryScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Models/ScriptData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/ScriptData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/Scripts/1. select_1 V1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Scripts/1. select_1 V1.1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/Scripts/2. select_2 V1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Scripts/2. select_2 V1.2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/table.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +34,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/File/ConfigReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -72,7 +74,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.DataMigration">
+  <component name="RunManager" selected="Publish to folder.Publish DataMigration to folder">
     <configuration name="Publish DataMigration to folder (1)" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" include_all_content_for_self_extract="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/win-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
       <method v="2" />
@@ -123,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728743462074</updated>
-      <workItem from="1728743464060" duration="1813000" />
+      <workItem from="1728743464060" duration="6117000" />
     </task>
     <task id="LOCAL-00001" summary="add env">
       <option name="closed" value="true" />
@@ -133,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728743860181</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix json">
+      <option name="closed" value="true" />
+      <created>1728745469379</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728745469379</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +154,52 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add env" />
-    <option name="LAST_COMMIT_MESSAGE" value="add env" />
+    <MESSAGE value="fix json" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix json" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs</url>
+          <line>12</line>
+          <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\Db\ScriptManager.cs" containingFunctionPresentation="Method 'GetDiffScripts'">
+            <startOffsets>
+              <option value="480" />
+            </startOffsets>
+            <endOffsets>
+              <option value="519" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs</url>
+          <line>9</line>
+          <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\Db\ScriptManager.cs" containingFunctionPresentation="Method 'GetDiffScripts'">
+            <startOffsets>
+              <option value="265" />
+            </startOffsets>
+            <endOffsets>
+              <option value="331" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs</url>
+          <line>22</line>
+          <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\File\ScriptFileManager.cs" containingFunctionPresentation="Method 'GetFileScripts'">
+            <startOffsets>
+              <option value="811" />
+            </startOffsets>
+            <endOffsets>
+              <option value="866" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS script_history (
     id SERIAL PRIMARY KEY,
     order_number INT NOT NULL,
     script_name VARCHAR(255) NOT NULL,
+    script_file_name VARCHAR(255) NOT NULL,
+    script_version VARCHAR(255) NOT NULL,
     script_content TEXT NOT NULL,
     script_status INT NOT NULL,
     script_time TIMESTAMP NOT NULL

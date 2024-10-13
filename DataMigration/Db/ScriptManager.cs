@@ -17,10 +17,18 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
                 listScriptDif.Add(new ScriptData
                 {
                     ScriptName = fileScript.ScriptName,
-                    FullName =  fileScript.FullName,
+                    FullName =  fileScript.ScriptFileName,
                     ScriptContent = fileScript.ScriptContent,
                     OrderNumber = fileScript.OrderNumber,
+                    Version = fileScript.ScriptVersion
                 });
+            }
+            else
+            {
+                if (historyScripts.Any(x => x.ScriptName == fileScript.ScriptName && x.ScriptFileName != fileScript.ScriptFileName))
+                {
+                   throw new Exception($"Script {fileScript.ScriptName} exist in database but have different file name. file name:  {fileScript.ScriptFileName}");
+                }
             }
         }
 

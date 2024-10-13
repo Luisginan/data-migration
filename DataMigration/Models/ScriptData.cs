@@ -9,4 +9,5 @@ public class ScriptData
     public string ErrorMessage { get; set; }
     public string FullName { get; set; }
     public bool IsExecuted { get; set; }
+    public object Version { get; set; }
 }

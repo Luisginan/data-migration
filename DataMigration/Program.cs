@@ -18,13 +18,6 @@ try
     Console.WriteLine("====================================");
     Console.ResetColor();
 
-    
-
-    if (config == null)
-    {
-        Console.WriteLine("Config is null");
-        return;
-    }
 
     IScriptFileManager scriptFileManager = new ScriptFileManager(config);
     IDbClient dbClient= new DbClientPostgres(config);
@@ -38,7 +31,9 @@ try
 }
 catch (Exception e)
 {
+    Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine(e.Message);
+    Console.ResetColor();
 }
 
 Console.WriteLine("Press any key to exit");
