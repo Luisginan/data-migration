@@ -44,7 +44,7 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
             try
             {
                 dbClient.ExecuteScript(scriptData.ScriptContent);
-                Console.WriteLine($"Script {scriptData.ScriptName} executed successfully");
+                Console.WriteLine($"Script {scriptData.FullName} executed successfully");
                 dbClient.InsertHistoryScript(scriptData);
                 scriptData.isErrored = false;
                 scriptData.ErrorMessage = string.Empty;
