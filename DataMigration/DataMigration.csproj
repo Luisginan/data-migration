@@ -6,6 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>OneLonDataMigration</RootNamespace>
+        <AssemblyVersion>1.2</AssemblyVersion>
+        <FileVersion>1.2</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,6 +27,9 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Update="Scripts\3. insert_messaging_log V1.1.sql">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Scripts\100. get_data_config V1.1.sql">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>

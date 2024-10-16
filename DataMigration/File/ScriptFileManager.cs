@@ -38,8 +38,9 @@ public class ScriptFileManager(Config config) : IScriptFileManager
             };
             iterationOrderNumber++;
             fileScript.OrderNumber = iterationOrderNumber;
+            fileScript.FileOrderNumber = orderNumber;
             listFileScripts.Add(fileScript);
         }
-        return listFileScripts.OrderBy(x => x.OrderNumber).ToList();
+        return listFileScripts.OrderBy(x => x.FileOrderNumber).ToList();
     }
 }
