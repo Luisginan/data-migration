@@ -10,4 +10,5 @@ public class ScriptData
     public string FullName { get; set; }
     public bool IsExecuted { get; set; }
     public object Version { get; set; }
+    public int FileOrderNumber { get; set; }
 }

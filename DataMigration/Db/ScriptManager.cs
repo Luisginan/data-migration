@@ -21,7 +21,8 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
                     FullName =  fileScript.ScriptFileName,
                     ScriptContent = fileScript.ScriptContent,
                     OrderNumber = fileScript.OrderNumber,
-                    Version = fileScript.ScriptVersion
+                    Version = fileScript.ScriptVersion,
+                    FileOrderNumber = fileScript.FileOrderNumber
                 });
             }
             else

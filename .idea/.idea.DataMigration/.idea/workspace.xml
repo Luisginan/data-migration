@@ -7,7 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="fix ordering file" />
+    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="fix ordering file">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/File/IScriptLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IScriptLogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/Models/ScriptData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/ScriptData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +44,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Project.DataMigration.executor": "Run",
+    "Publish to folder.Publish DataMigration to folder.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -46,7 +55,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.DataMigration">
+    <configuration name="Publish DataMigration to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" delete_existing_files="true" include_all_content_for_self_extract="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/win-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
+      <method v="2" />
+    </configuration>
     <configuration name="DataMigration" type="DotNetProject" factoryName=".NET Project" temporary="true">
       <option name="EXE_PATH" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0/DataMigration.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -65,6 +78,10 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.DataMigration" />
+      <item itemvalue="Publish to folder.Publish DataMigration to folder" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue=".NET Project.DataMigration" />
@@ -80,7 +97,8 @@
       <option name="presentableId" value="Default" />
       <updated>1728834044096</updated>
       <workItem from="1728834045170" duration="38000" />
-      <workItem from="1729050448931" duration="387000" />
+      <workItem from="1729050448931" duration="1706000" />
+      <workItem from="1729180526913" duration="1626000" />
     </task>
     <task id="LOCAL-00001" summary="fix ordering file">
       <option name="closed" value="true" />
@@ -90,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729050827165</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix ordering file">
+      <option name="closed" value="true" />
+      <created>1729050969153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729050969153</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,5 +127,24 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix ordering file" />
     <option name="LAST_COMMIT_MESSAGE" value="fix ordering file" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs</url>
+          <line>24</line>
+          <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\File\ScriptFileLogger.cs" containingFunctionPresentation="Method 'WriteScriptChanges'">
+            <startOffsets>
+              <option value="712" />
+            </startOffsets>
+            <endOffsets>
+              <option value="761" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
