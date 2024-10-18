@@ -10,7 +10,9 @@ public class ScriptFileLogger : IScriptLogger
     public void LogScript(List<ScriptData> listScriptDif)
     {
         var json = JsonConvert.SerializeObject(listScriptDif, Newtonsoft.Json.Formatting.Indented);
-        System.IO.File.WriteAllText($"script_log_{Guid.NewGuid()}.json", json);
+        // file name format script_log_202410180748.json
+        var fileName = DateTime.Now.ToString("yyyyMMdd_HHmm");
+        System.IO.File.WriteAllText($"script_log_{fileName}.json", json);
     }
 
     public void WriteScriptChanges(List<ScriptData> listScriptDif)

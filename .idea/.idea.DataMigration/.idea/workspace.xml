@@ -7,14 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="fix ordering file">
+    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="save file changes log">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/IScriptLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IScriptLogger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Models/ScriptData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/ScriptData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.DataMigration.executor": "Run",
-    "Publish to folder.Publish DataMigration to folder.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.DataMigration.executor&quot;: &quot;Run&quot;,
+    &quot;Publish to folder.Publish DataMigration to folder.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.DataMigration">
+}</component>
+  <component name="RunManager" selected="Publish to folder.Publish DataMigration to folder">
     <configuration name="Publish DataMigration to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" include_all_content_for_self_extract="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/win-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
       <method v="2" />
@@ -98,7 +93,7 @@
       <updated>1728834044096</updated>
       <workItem from="1728834045170" duration="38000" />
       <workItem from="1729050448931" duration="1706000" />
-      <workItem from="1729180526913" duration="1626000" />
+      <workItem from="1729180526913" duration="3605000" />
     </task>
     <task id="LOCAL-00001" summary="fix ordering file">
       <option name="closed" value="true" />
@@ -116,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729050969153</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="save file changes log">
+      <option name="closed" value="true" />
+      <created>1729182263135</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729182263135</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,20 +129,21 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix ordering file" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix ordering file" />
+    <MESSAGE value="save file changes log" />
+    <option name="LAST_COMMIT_MESSAGE" value="save file changes log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs</url>
-          <line>24</line>
+          <line>26</line>
           <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\File\ScriptFileLogger.cs" containingFunctionPresentation="Method 'WriteScriptChanges'">
             <startOffsets>
-              <option value="712" />
+              <option value="825" />
             </startOffsets>
             <endOffsets>
-              <option value="761" />
+              <option value="874" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
