@@ -7,9 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="save file changes log">
+    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="change format log">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/File/IScriptLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IScriptLogger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +53,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Publish to folder.Publish DataMigration to folder">
+  <component name="RunManager" selected=".NET Project.DataMigration">
     <configuration name="Publish DataMigration to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" include_all_content_for_self_extract="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/win-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
       <method v="2" />
@@ -94,6 +97,8 @@
       <workItem from="1728834045170" duration="38000" />
       <workItem from="1729050448931" duration="1706000" />
       <workItem from="1729180526913" duration="3605000" />
+      <workItem from="1729253636021" duration="1805000" />
+      <workItem from="1729565076340" duration="965000" />
     </task>
     <task id="LOCAL-00001" summary="fix ordering file">
       <option name="closed" value="true" />
@@ -119,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729182263135</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change format log">
+      <option name="closed" value="true" />
+      <created>1729253873184</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729253873184</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,20 +143,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix ordering file" />
     <MESSAGE value="save file changes log" />
-    <option name="LAST_COMMIT_MESSAGE" value="save file changes log" />
+    <MESSAGE value="change format log" />
+    <option name="LAST_COMMIT_MESSAGE" value="change format log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs</url>
-          <line>26</line>
+          <line>48</line>
           <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\File\ScriptFileLogger.cs" containingFunctionPresentation="Method 'WriteScriptChanges'">
             <startOffsets>
-              <option value="825" />
+              <option value="1725" />
             </startOffsets>
             <endOffsets>
-              <option value="874" />
+              <option value="1774" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

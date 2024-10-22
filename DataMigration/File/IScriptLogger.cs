@@ -6,4 +6,5 @@ public interface IScriptLogger
 {
     void LogScript(List<ScriptData> listScriptDif);
     void WriteScriptChanges(List<ScriptData> listScriptDif);
+    void ZipScriptChanges(List<ScriptData> listScriptDif);
 }

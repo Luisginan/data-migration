@@ -51,5 +51,6 @@ public class ScriptExecutor(IScriptManager scriptManager,IScriptLogger scriptLog
         
         scriptLogger.LogScript(listScriptExecuted);
         scriptLogger.WriteScriptChanges(listScriptExecuted);
+        //scriptLogger.ZipScriptChanges(listScriptExecuted);
     }
 }

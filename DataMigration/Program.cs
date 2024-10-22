@@ -23,7 +23,7 @@ try
     IDbClient dbClient= new DbClientPostgres(config);
 
     IScriptManager scriptManager = new ScriptManager(dbClient, scriptFileManager);
-    IScriptLogger scriptLogger = new ScriptFileLogger();    
+    IScriptLogger scriptLogger = new ScriptFileLogger(config);    
 
     var scriptExecutor = new ScriptExecutor(scriptManager, scriptLogger);
 
