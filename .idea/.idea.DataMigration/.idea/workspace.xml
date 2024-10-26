@@ -7,23 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="change format log">
-      <change afterPath="$PROJECT_DIR$/DataMigration/File/FileFolder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataMigration/File/IFileFolder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataMigrationTest/DataMigrationTest.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataMigrationTest/ScriptFileManagerTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataMigrationTest/ScriptManagerTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataMigrationTest/UnitTest1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources/836399c9-8604-4f42-920c-00c1a205b23b.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/projectSettingsUpdater.xml" afterDir="false" />
+    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataMigration/ScriptChecker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/ConfigReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ConfigReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,38 +45,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.DataMigration.executor": "Run",
-    "7d380965-f966-4bed-ba92-ec5109f2f73f.executor": "Debug",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Publish to folder.Publish DataMigration to folder.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.DataMigration.executor&quot;: &quot;Run&quot;,
+    &quot;7d380965-f966-4bed-ba92-ec5109f2f73f.executor&quot;: &quot;Debug&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Publish to folder.Publish DataMigration to folder.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Asus\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Asus\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Asus\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Asus\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Asus\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Asus\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.DataMigration">
+    <configuration name="table.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/DataMigration/table.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
     <configuration name="Publish DataMigration to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/win-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
       <method v="2" />
     </configuration>
     <configuration name="DataMigration" type="DotNetProject" factoryName=".NET Project" temporary="true">
       <option name="EXE_PATH" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0/DataMigration.exe" />
-      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="check" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="1" />
@@ -107,11 +101,13 @@
     </configuration>
     <list>
       <item itemvalue=".NET Project.DataMigration" />
+      <item itemvalue="Database Script.table.sql" />
       <item itemvalue="Publish to folder.Publish DataMigration to folder" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue=".NET Project.DataMigration" />
+        <item itemvalue="Database Script.table.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +124,7 @@
       <workItem from="1729180526913" duration="3605000" />
       <workItem from="1729253636021" duration="1805000" />
       <workItem from="1729565076340" duration="965000" />
-      <workItem from="1729957423424" duration="3485000" />
+      <workItem from="1729957423424" duration="5507000" />
     </task>
     <task id="LOCAL-00001" summary="fix ordering file">
       <option name="closed" value="true" />
@@ -162,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729253873184</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add xunit">
+      <option name="closed" value="true" />
+      <created>1729962112884</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729962112884</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,50 +181,50 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 32% 286/419" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 29% 319/452" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 32% 286/419" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DataMigrationTest 44% 60/108" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 29% 319/452" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DataMigrationTest 37% 83/131" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 32% 286/419" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DataMigrationTest 44% 60/108" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DataMigrationTest 44% 60/108" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 29% 319/452" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DataMigrationTest 37% 83/131" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DataMigrationTest 37% 83/131" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 32% 286/419" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DataMigration 27% 226/311" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 29% 319/452" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DataMigration 26% 236/321" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 32% 286/419" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DataMigration 27% 226/311" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="OneLonDataMigration 30% 196/281" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 29% 319/452" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DataMigration 26% 236/321" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="OneLonDataMigration 31% 191/276" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 32% 286/419" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DataMigration 27% 226/311" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="OneLonDataMigration 30% 196/281" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 29% 319/452" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DataMigration 26% 236/321" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="OneLonDataMigration 31% 191/276" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Db 58% 38/90" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 32% 286/419" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DataMigration 27% 226/311" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="OneLonDataMigration 30% 196/281" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 29% 319/452" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DataMigration 26% 236/321" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="OneLonDataMigration 31% 191/276" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Db 58% 38/90" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="ScriptManager 98% 1/53" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 32% 286/419" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DataMigration 27% 226/311" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="OneLonDataMigration 30% 196/281" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 29% 319/452" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DataMigration 26% 236/321" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="OneLonDataMigration 31% 191/276" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Db 58% 38/90" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="ScriptManager 98% 1/53" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="GetDiffScripts() 96% 1/25" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
@@ -237,14 +241,15 @@
     <MESSAGE value="fix ordering file" />
     <MESSAGE value="save file changes log" />
     <MESSAGE value="change format log" />
-    <option name="LAST_COMMIT_MESSAGE" value="change format log" />
+    <MESSAGE value="add xunit" />
+    <option name="LAST_COMMIT_MESSAGE" value="add xunit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs</url>
-          <line>46</line>
+          <line>24</line>
           <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\File\ScriptFileLogger.cs" containingFunctionPresentation="Method 'WriteScriptChanges'" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -260,6 +265,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Nawa\DataMigration\DataMigration\File\ScriptFileManager.cs" containingFunctionPresentation="Method 'GetFileScripts'">
+            <startOffsets>
+              <option value="750" />
+            </startOffsets>
+            <endOffsets>
+              <option value="847" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
