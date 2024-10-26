@@ -19,11 +19,12 @@ try
     Console.ResetColor();
 
 
-    IScriptFileManager scriptFileManager = new ScriptFileManager(config);
+    IFileFolder fileFolder = new FileFolder();
+    IScriptFileManager scriptFileManager = new ScriptFileManager(config, fileFolder);
     IDbClient dbClient= new DbClientPostgres(config);
 
     IScriptManager scriptManager = new ScriptManager(dbClient, scriptFileManager);
-    IScriptLogger scriptLogger = new ScriptFileLogger(config);    
+    IScriptLogger scriptLogger = new ScriptFileLogger(config, fileFolder);    
 
     var scriptExecutor = new ScriptExecutor(scriptManager, scriptLogger);
 

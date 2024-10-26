@@ -3,27 +3,25 @@ using OneLonDataMigration.Models;
 
 namespace OneLonDataMigration.File;
 
-public class ScriptFileManager(Config config) : IScriptFileManager
+public partial class ScriptFileManager(Config config, IFileFolder fileFolder) : IScriptFileManager
 {
     public List<FileScript> GetFileScripts(int lastOrderNumber)
     {
         var listFileScripts = new List<FileScript>();
-        var files = Directory.GetFiles(config.PathScripts, "*.sql");
+        var files = fileFolder.GetFiles(config.PathScripts);
 
         var iterationOrderNumber = lastOrderNumber;
         
-        var regex = new Regex(@"^\d+\.\s\w+\sV\d+\.\d+\.sql$");
+        var regex = MyRegex();
         
         foreach (var file in files)
         {
-            if (!regex.IsMatch(Path.GetFileName(file)))
-            {
+            if (!regex.IsMatch(fileFolder.GetFileName(file)))
                 throw new Exception($"File {file} have invalid format");
-            }
         }   
         foreach (var file in files)
         {
-            var orderNumber = int.Parse(Path.GetFileName(file).Split(' ')[0].Replace('.', ' ').Trim());
+            var orderNumber = int.Parse(fileFolder.GetFileName(file).Split(' ')[0].Replace('.', ' ').Trim());
             if (orderNumber < config.MinimumOrderNumber)
             {
                 Console.WriteLine($"Script {file} have order number less than minimum order number. Skipped");
@@ -31,10 +29,10 @@ public class ScriptFileManager(Config config) : IScriptFileManager
             }
             var fileScript = new FileScript
             {
-                ScriptName = Path.GetFileName(file).Split(' ')[1].Trim(),
-                ScriptFileName = Path.GetFileName(file),
-                ScriptVersion = Path.GetFileName(file).Split(' ')[2].Replace(".sql", "").Trim(),
-                ScriptContent = System.IO.File.ReadAllText(file)
+                ScriptName = fileFolder.GetFileName(file).Split(' ')[1].Trim(),
+                ScriptFileName = fileFolder.GetFileName(file),
+                ScriptVersion = fileFolder.GetFileName(file).Split(' ')[2].Replace(".sql", "").Trim(),
+                ScriptContent = fileFolder.ReadAllText(file)
             };
             iterationOrderNumber++;
             fileScript.OrderNumber = iterationOrderNumber;
@@ -43,4 +41,7 @@ public class ScriptFileManager(Config config) : IScriptFileManager
         }
         return listFileScripts.OrderBy(x => x.FileOrderNumber).ToList();
     }
+
+    [GeneratedRegex(@"^\d+\.\s\w+\sV\d+\.\d+\.sql$")]
+    private static partial Regex MyRegex();
 }

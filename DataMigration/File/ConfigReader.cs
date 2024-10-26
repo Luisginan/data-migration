@@ -4,16 +4,11 @@ namespace OneLonDataMigration.File;
 
 public class ConfigReader
 {
-    private readonly JsonSerializerSettings _jsonSerializerSettings;
-
-    public ConfigReader()
+    private readonly JsonSerializerSettings _jsonSerializerSettings = new()
     {
-        _jsonSerializerSettings = new JsonSerializerSettings
-        {
-            Formatting = Formatting.Indented,
-            NullValueHandling = NullValueHandling.Ignore
-        };
-    }
+        Formatting = Formatting.Indented,
+        NullValueHandling = NullValueHandling.Ignore
+    };
 
     public Config ReadConfigFromJson()
     {
@@ -21,8 +16,9 @@ public class ConfigReader
         {
             var newFile = new Config
             {
-                PathScripts = "C:\\Scripts",
-                ConnectionString = "Server=localhost;Port=5432;Database=postgres;User Id=postgres;Password=postgres;"
+                PathScripts = "Scripts",
+                ConnectionString = "Server=localhost;Port=5432;Database=postgres;User Id=postgres;Password=postgres;",
+                MinimumOrderNumber = 1
             };
             System.IO.File.WriteAllText("config.json", JsonConvert.SerializeObject(newFile, _jsonSerializerSettings));
             throw new Exception("File json not found, it will generated one for sample");
@@ -30,9 +26,7 @@ public class ConfigReader
         var json = System.IO.File.ReadAllText("config.json");
         var config = JsonConvert.DeserializeObject<Config>(json, _jsonSerializerSettings);
         if (config == null)
-        {
             throw new Exception("Failed deserialize config");
-        }
 
         return config;
     }
