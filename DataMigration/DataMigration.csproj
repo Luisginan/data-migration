@@ -34,4 +34,10 @@
       </None>
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="NawaEncryption">
+        <HintPath>..\dll\NawaEncryption.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

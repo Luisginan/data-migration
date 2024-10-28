@@ -2,6 +2,6 @@
   "GreetingTitle":"Oneloan Data Migration Tool",
   "GreetingMessage":"Developed by OneLoan Team",
   "PathScripts":"Scripts",
-  "ConnectionString":"Server=localhost;Port=5432;Database=blueprint;User Id=postgres;Password=123456;",
+  "ConnectionString":"Server=localhost;Port=5432;Database=blueprint;User Id=postgres;Password=VCt/m8/zEfD5MN61wPTfrQ==;",
   "MinimumOrderNumber":0
 }

@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using NawaEncryption;
+using Npgsql;
 using OneLonDataMigration.Models;
 
 namespace OneLonDataMigration.Db;
@@ -6,6 +7,7 @@ namespace OneLonDataMigration.Db;
 public class DbClientPostgres(Config config) : IDbClient
 {
 
+    private static string _connectionString = "";
     public List<HistoryScript> GetHistoryScripts()
     {
         var historyScripts = new List<HistoryScript>();
@@ -27,7 +29,14 @@ public class DbClientPostgres(Config config) : IDbClient
 
     private  NpgsqlConnection GetConnection()
     {
-        return new NpgsqlConnection(config.ConnectionString);
+        if (!string.IsNullOrEmpty(_connectionString))
+            return new NpgsqlConnection(_connectionString);
+        
+        var salt = "33aba0ba-ab2f-42cf-a075-4da60a5b283f";
+        var password = config.ConnectionString.Split("Password=")[1].Split(";")[0];
+        var passOri = Common.DecryptRijndael(password, salt);
+        _connectionString = config.ConnectionString.Replace("Password=" + password, "Password=" + passOri);
+        return new NpgsqlConnection(_connectionString);
     }
 
     public void ExecuteScript(string script)
