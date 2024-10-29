@@ -4,6 +4,7 @@ using OneLonDataMigration;
 using OneLonDataMigration.Db;
 using OneLonDataMigration.File;
 
+var isThrowError = false;
 try
 {
     // check argument for help
@@ -16,10 +17,16 @@ try
         Console.WriteLine("  help : Show this help");
         Console.WriteLine("  check : Check all scripts");
         Console.WriteLine("  default : Run all scripts");
+        Console.WriteLine("  --throw-error : Throw error when error occurs");
+        Console.WriteLine("  --force : no need confirm");
         return;
     }
     
     var isCheck = args.Length > 0 && args[0].ToLower() == "check";
+    
+    isThrowError = Array.Exists(args, arg => arg.ToLower() == "--throw-error");
+    
+    var isForce = Array.Exists(args, arg => arg.ToLower() == "--force");
     
     var configReader = new ConfigReader();
     var config = configReader.ReadConfigFromJson();
@@ -47,13 +54,12 @@ try
     {
         var scriptChecker = new ScriptChecker(scriptManager, scriptLogger);
         scriptChecker.CheckAllScripts();
-        Console.WriteLine("====================================");
-        Console.WriteLine("Press any key to exit");
-        Console.ReadKey();
-        return;
+    }
+    else
+    {
+        scriptExecutor.RunAllScripts(isForce);
     }
     
-    scriptExecutor.RunAllScripts();
 }
 catch (Exception e)
 {
@@ -62,7 +68,11 @@ catch (Exception e)
     Console.ResetColor();
 }
 
-Console.WriteLine("====================================");
-Console.WriteLine("Press any key to exit");
-Console.ReadKey();
+if (!isThrowError)
+{
+    Console.WriteLine("====================================");
+    Console.WriteLine("Press any key to exit");
+    Console.ReadKey();
+
+}
 

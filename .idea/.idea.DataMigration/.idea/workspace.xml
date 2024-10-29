@@ -7,15 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="increase version">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +25,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/81cabf2857a01351e5ab578947c7403a5b128ad1/src/libraries/System.Private.CoreLib/src/System/IO/Enumeration/FileSystemEnumerator.Windows.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/81cabf2857a01351e5ab578947c7403a5b128ad1/src/libraries/System.Text.RegularExpressions/src/System/Text/RegularExpressions/GeneratedRegexAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/81cabf2857a01351e5ab578947c7403a5b128ad1/src/libraries/System.Text.RegularExpressions/src/System/Text/RegularExpressions/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b05fc3ef644b7632d4481b3defa11634da02637d896cb5eca3eca7cf2f3ee3/String.Manipulation.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -51,11 +45,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Project.Check.executor": "Run",
     ".NET Project.DataMigration.executor": "Run",
+    ".NET Project.check --throwError.executor": "Run",
+    ".NET Project.run --force.executor": "Run",
+    ".NET Project.throwError.executor": "Run",
     "7d380965-f966-4bed-ba92-ec5109f2f73f.executor": "Debug",
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Publish to folder.Publish DataMigration to folder.executor": "Run",
+    "Publish to folder.Publish Linux.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -68,7 +67,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.DataMigration">
+  <component name="RunManager" selected=".NET Project.run --force">
     <configuration name="table.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/DataMigration/table.sql" />
       <script-mode>FILE</script-mode>
@@ -78,7 +77,65 @@
       <riderPublish configuration="Release" delete_existing_files="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/win-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
       <method v="2" />
     </configuration>
-    <configuration name="DataMigration" type="DotNetProject" factoryName=".NET Project" temporary="true">
+    <configuration name="Publish Linux" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" delete_existing_files="true" include_all_content_for_self_extract="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="linux-x64" self_contained="true" target_folder="$PROJECT_DIR$/DataMigration/bin/Release/net8.0/linux-x64/publish" target_framework="net8.0" trim_unused_assemblies="true" uuid_high="-7124661716068841349" uuid_low="-8258518624079626465" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Check" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0/DataMigration.exe" />
+      <option name="PROGRAM_PARAMETERS" value="check" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/DataMigration/DataMigration.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="check --throwError" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0/DataMigration.exe" />
+      <option name="PROGRAM_PARAMETERS" value="check --throw-error" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/DataMigration/DataMigration.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="run --force" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0/DataMigration.exe" />
+      <option name="PROGRAM_PARAMETERS" value="--force" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/DataMigration/DataMigration.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="run" type="DotNetProject" factoryName=".NET Project" temporary="true">
       <option name="EXE_PATH" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0/DataMigration.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataMigration/bin/Debug/net8.0" />
@@ -97,13 +154,17 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue=".NET Project.DataMigration" />
+      <item itemvalue=".NET Project.Check" />
+      <item itemvalue=".NET Project.check --throwError" />
+      <item itemvalue=".NET Project.run --force" />
+      <item itemvalue=".NET Project.run" />
       <item itemvalue="Database Script.table.sql" />
+      <item itemvalue="Publish to folder.Publish Linux" />
       <item itemvalue="Publish to folder.Publish DataMigration to folder" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue=".NET Project.DataMigration" />
+        <item itemvalue=".NET Project.run" />
         <item itemvalue="Database Script.table.sql" />
       </list>
     </recent_temporary>
@@ -122,7 +183,8 @@
       <workItem from="1729253636021" duration="1805000" />
       <workItem from="1729565076340" duration="965000" />
       <workItem from="1729957423424" duration="5507000" />
-      <workItem from="1730123148079" duration="1325000" />
+      <workItem from="1730123148079" duration="2111000" />
+      <workItem from="1730172578190" duration="5807000" />
     </task>
     <task id="LOCAL-00001" summary="fix ordering file">
       <option name="closed" value="true" />
@@ -164,7 +226,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729962112884</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="use password encryption">
+      <option name="closed" value="true" />
+      <created>1730124533384</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730124533384</updated>
+    </task>
+    <task id="LOCAL-00007" summary="up version">
+      <option name="closed" value="true" />
+      <created>1730124575515</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730124575515</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +318,9 @@
     <MESSAGE value="save file changes log" />
     <MESSAGE value="change format log" />
     <MESSAGE value="add xunit" />
-    <option name="LAST_COMMIT_MESSAGE" value="add xunit" />
+    <MESSAGE value="use password encryption" />
+    <MESSAGE value="up version" />
+    <option name="LAST_COMMIT_MESSAGE" value="up version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -296,6 +376,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataMigration/ScriptExecutor.cs</url>
+          <line>10</line>
+          <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\ScriptExecutor.cs" containingFunctionPresentation="Method 'RunAllScripts'">
+            <startOffsets>
+              <option value="282" />
+            </startOffsets>
+            <endOffsets>
+              <option value="333" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
