@@ -4,11 +4,13 @@ using OneLonDataMigration.Models;
 
 namespace OneLonDataMigration;
 
-public class ScriptExecutor(IScriptManager scriptManager,IScriptLogger scriptLogger)
+public class ScriptExecutor(IScriptManager scriptManager,IScriptLogger scriptLogger, ISpinner spinner)
 {
     public void RunAllScripts(bool isForce = false)
     {
+        spinner.Start();
         var listScriptDif = scriptManager.GetDiffScripts();
+        spinner.Stop();
         foreach (var script in listScriptDif)
         {
             Console.WriteLine(script.FullName);
@@ -30,7 +32,9 @@ public class ScriptExecutor(IScriptManager scriptManager,IScriptLogger scriptLog
        
             if (key.Key == ConsoleKey.Y)
             {
+                spinner.Start();
                 listScriptExecuted = ScriptExecute(listScriptDif);
+                spinner.Stop();
             }
             else
             {
@@ -46,6 +50,7 @@ public class ScriptExecutor(IScriptManager scriptManager,IScriptLogger scriptLog
         
         scriptLogger.LogScript(listScriptExecuted);
         scriptLogger.WriteScriptChanges(listScriptExecuted);
+        
     }
 
     private List<ScriptData> ScriptExecute(List<ScriptData> listScriptDif)

@@ -1,78 +1,157 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using OneLonDataMigration;
-using OneLonDataMigration.Db;
+﻿using OneLonDataMigration.Db;
 using OneLonDataMigration.File;
 
-var isThrowError = false;
-try
+namespace OneLonDataMigration;
+
+public class Program
 {
-    // check argument for help
-    
-    if (args.Length > 0 && args[0].ToLower() == "help")
+    private static void Main(string[] args)
     {
-        Console.WriteLine("OneLoan Data Migration Tool");
-        Console.WriteLine("Usage: DataMigration [options]");
-        Console.WriteLine("Options:");
-        Console.WriteLine("  help : Show this help");
-        Console.WriteLine("  check : Check all scripts");
-        Console.WriteLine("  default : Run all scripts");
-        Console.WriteLine("  --throw-error : Throw error when error occurs");
-        Console.WriteLine("  --force : no need confirm");
-        return;
+        var isThrowError = false;
+        ISpinner spinner = new Spinner();
+        try
+        {
+            DisplayHeader();
+
+            if (args.Length > 0 && args[0].ToLower() == "help")
+            {
+                DisplayHelp();
+                return;
+            }
+
+            var isCheck = args.Length > 0 && args[0].ToLower() == "check";
+            isThrowError = Array.Exists(args, arg => arg.ToLower() == "--throw-error");
+            var isForce = Array.Exists(args, arg => arg.ToLower() == "--force");
+
+            var config = new ConfigReader().ReadConfigFromJson();
+            DisplayEnvironmentInfo(config);
+
+            IFileFolder fileFolder = new FileFolder();
+            IScriptFileManager scriptFileManager = new ScriptFileManager(config, fileFolder);
+            IDbClient dbClient = new DbClientPostgres(config);
+            IScriptManager scriptManager = new ScriptManager(dbClient, scriptFileManager);
+            IScriptLogger scriptLogger = new ScriptFileLogger(config, fileFolder);
+
+
+            if (isCheck)
+            {
+                DisplayActionBanner("Checking Scripts");
+                var scriptChecker = new ScriptChecker(scriptManager, spinner);
+                scriptChecker.CheckAllScripts();
+            }
+            else
+            {
+                DisplayActionBanner("Executing Scripts");
+                var scriptExecutor = new ScriptExecutor(scriptManager, scriptLogger, spinner);
+                scriptExecutor.RunAllScripts(isForce);
+            }
+
+            DisplaySuccess("Operation completed successfully!");
+        }
+        catch (Exception e)
+        {
+            DisplayError(e.Message);
+        }
+        finally
+        {
+            spinner.Stop();
+        }
+
+        if (!isThrowError)
+        {
+            DisplayFooter();
+            Console.ReadKey();
+        }
     }
-    
-    var isCheck = args.Length > 0 && args[0].ToLower() == "check";
-    
-    isThrowError = Array.Exists(args, arg => arg.ToLower() == "--throw-error");
-    
-    var isForce = Array.Exists(args, arg => arg.ToLower() == "--force");
-    
-    var configReader = new ConfigReader();
-    var config = configReader.ReadConfigFromJson();
 
-    var env = config.ConnectionString.Split(";").Where(x => !x.ToLower().Contains("Password".ToLower())).Aggregate((x, y) => x + ";" + y);    
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine(config.GreetingTitle);
-    Console.WriteLine("Version " + typeof(Program).Assembly.GetName().Version); 
-    Console.WriteLine("Developed by OneLoan Team");
-    Console.WriteLine("Env : " + env);
-    Console.WriteLine("====================================");
-    Console.ResetColor();
-
-
-    IFileFolder fileFolder = new FileFolder();
-    IScriptFileManager scriptFileManager = new ScriptFileManager(config, fileFolder);
-    IDbClient dbClient= new DbClientPostgres(config);
-
-    IScriptManager scriptManager = new ScriptManager(dbClient, scriptFileManager);
-    IScriptLogger scriptLogger = new ScriptFileLogger(config, fileFolder);    
-
-    var scriptExecutor = new ScriptExecutor(scriptManager, scriptLogger);
-
-    if (isCheck)
+    private static void DisplayHeader()
     {
-        var scriptChecker = new ScriptChecker(scriptManager, scriptLogger);
-        scriptChecker.CheckAllScripts();
+        Console.Clear();
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine(@"
+   ____              __                        
+  / __ \____  ___   / /   ____  ____ ___  ___ 
+ / / / / __ \/ _ \ / /   / __ \/ __ `__ \/ _ \
+/ /_/ / / / /  __// /___/ /_/ / / / / / /  __/
+\____/_/ /_/\___//_____/\____/_/ /_/ /_/\___/ 
+                                              
+        Data Migration Tool");
+        Console.ResetColor();
+        Console.WriteLine();
     }
-    else
+
+    private static void DisplayHelp()
     {
-        scriptExecutor.RunAllScripts(isForce);
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("╔════════════════════════════════════════╗");
+        Console.WriteLine("║             Available Options          ║");
+        Console.WriteLine("╠════════════════════════════════════════╣");
+        Console.WriteLine("║  help         : Show this help         ║");
+        Console.WriteLine("║  check        : Check all scripts      ║");
+        Console.WriteLine("║  default      : Run all scripts        ║");
+        Console.WriteLine("║  --throw-error: Throw error on fail    ║");
+        Console.WriteLine("║  --force      : Skip confirmation      ║");
+        Console.WriteLine("╚════════════════════════════════════════╝");
+        Console.ResetColor();
     }
-    
-}
-catch (Exception e)
-{
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine(e.Message);
-    Console.ResetColor();
-}
 
-if (!isThrowError)
-{
-    Console.WriteLine("====================================");
-    Console.WriteLine("Press any key to exit");
-    Console.ReadKey();
+    private static void DisplayEnvironmentInfo(dynamic config)
+    {
+        var env = ((string)config.ConnectionString).Split(";")
+            .Where(x => !x.ToLower().Contains("password"))
+            .Aggregate((x, y) => x + ";" + y);
 
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("┌────────────────────────────────────────────────┐");
+        Console.WriteLine($"│ {config.GreetingTitle,-46} │");
+        Console.WriteLine($"│ Version: {typeof(Program).Assembly.GetName().Version,-37} │");
+        Console.WriteLine($"│ Developed by OneLoan Team {new string(' ', 20)} │");
+        Console.WriteLine("└────────────────────────────────────────────────┘");
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine($"Connection: {env}");
+        Console.ResetColor();
+        Console.WriteLine();
+    }
+
+    private static void DisplayActionBanner(string action)
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine($"▶ {action}");
+        Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        Console.ResetColor();
+    }
+
+    private static void DisplaySuccess(string message)
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"✔ {message}");
+        Console.ResetColor();
+    }
+
+    private static void DisplayError(string message)
+    {
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"╔{new string('═', message.Length + 4)}╗");
+        Console.WriteLine($"║  {message}  ║");
+        Console.WriteLine($"╚{new string('═', message.Length + 4)}╝");
+        Console.ResetColor();
+    }
+
+    private static void DisplayFooter()
+    {
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine("────────────────────────────────────────────────");
+        Console.WriteLine("Press any key to exit");
+        Console.ResetColor();
+    }
 }
-

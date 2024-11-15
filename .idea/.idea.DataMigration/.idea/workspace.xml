@@ -9,9 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/DataMigration.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/ScriptExecutor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,31 +40,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Check.executor": "Run",
-    ".NET Project.DataMigration.executor": "Run",
-    ".NET Project.check --throwError.executor": "Run",
-    ".NET Project.run --force.executor": "Run",
-    ".NET Project.throwError.executor": "Run",
-    "7d380965-f966-4bed-ba92-ec5109f2f73f.executor": "Debug",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Publish to folder.Publish DataMigration to folder.executor": "Run",
-    "Publish to folder.Publish Linux.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Check.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.DataMigration.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.check --throwError.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.run --force.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.throwError.executor&quot;: &quot;Run&quot;,
+    &quot;7d380965-f966-4bed-ba92-ec5109f2f73f.executor&quot;: &quot;Debug&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Publish to folder.Publish DataMigration to folder.executor&quot;: &quot;Run&quot;,
+    &quot;Publish to folder.Publish Linux.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.run --force">
+}</component>
+  <component name="RunManager" selected="Publish to folder.Publish Linux">
     <configuration name="table.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/DataMigration/table.sql" />
       <script-mode>FILE</script-mode>
@@ -184,7 +181,11 @@
       <workItem from="1729565076340" duration="965000" />
       <workItem from="1729957423424" duration="5507000" />
       <workItem from="1730123148079" duration="2111000" />
-      <workItem from="1730172578190" duration="5807000" />
+      <workItem from="1730172578190" duration="6029000" />
+      <workItem from="1730194200308" duration="176000" />
+      <workItem from="1730194421176" duration="3194000" />
+      <workItem from="1730271689718" duration="3355000" />
+      <workItem from="1731557934718" duration="1097000" />
     </task>
     <task id="LOCAL-00001" summary="fix ordering file">
       <option name="closed" value="true" />
@@ -242,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730124575515</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add parameter">
+      <option name="closed" value="true" />
+      <created>1730193956744</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730193956744</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +329,8 @@
     <MESSAGE value="add xunit" />
     <MESSAGE value="use password encryption" />
     <MESSAGE value="up version" />
-    <option name="LAST_COMMIT_MESSAGE" value="up version" />
+    <MESSAGE value="add parameter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add parameter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

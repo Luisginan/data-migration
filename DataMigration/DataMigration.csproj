@@ -6,8 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>OneLonDataMigration</RootNamespace>
-        <AssemblyVersion>1.7</AssemblyVersion>
-        <FileVersion>1.7</FileVersion>
+        <AssemblyVersion>1.8</AssemblyVersion>
+        <FileVersion>1.8</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
