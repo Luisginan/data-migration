@@ -16,7 +16,9 @@ public class ConfigReader
         {
             var newFile = new Config
             {
+                GreetingTitle = "Oneloan Data Migration Tool",
                 PathScripts = "Scripts",
+                GreetingMessage = "Developed by OneLoan Team",
                 ConnectionString = "Server=localhost;Port=5432;Database=postgres;User Id=postgres;Password=postgres;",
                 MinimumOrderNumber = 1
             };

@@ -24,6 +24,8 @@ public class ScriptExecutor(IScriptManager scriptManager,IScriptLogger scriptLog
         var listScriptExecuted = new List<ScriptData>();
         if (!isForce)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("Execute all new script (Y/N) ?");
             Console.ResetColor();

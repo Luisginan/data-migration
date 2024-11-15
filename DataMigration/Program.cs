@@ -71,10 +71,10 @@ public class Program
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine(@"
    ____              __                        
-  / __ \____  ___   / /   ____  ____ ___  ___ 
- / / / / __ \/ _ \ / /   / __ \/ __ `__ \/ _ \
-/ /_/ / / / /  __// /___/ /_/ / / / / / /  __/
-\____/_/ /_/\___//_____/\____/_/ /_/ /_/\___/ 
+  / __ \____  ___   / /   ____  ____ ___  
+ / / / / __ \/ _ \ / /   / __ \/ __ `__ \
+/ /_/ / / / /  __// /___/ /_/ / / / / / /  
+\____/_/ /_/\___//_____/\____/_/ /_/ /_/
                                               
         Data Migration Tool");
         Console.ResetColor();
@@ -97,18 +97,18 @@ public class Program
         Console.ResetColor();
     }
 
-    private static void DisplayEnvironmentInfo(dynamic config)
+    private static void DisplayEnvironmentInfo(Config config)
     {
-        var env = ((string)config.ConnectionString).Split(";")
+        var env = config.ConnectionString.Split(";")
             .Where(x => !x.ToLower().Contains("password"))
             .Aggregate((x, y) => x + ";" + y);
-
+        
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("┌────────────────────────────────────────────────┐");
         Console.WriteLine($"│ {config.GreetingTitle,-46} │");
         Console.WriteLine($"│ Version: {typeof(Program).Assembly.GetName().Version,-37} │");
-        Console.WriteLine($"│ Developed by OneLoan Team {new string(' ', 20)} │");
+        Console.WriteLine($"│ {config.GreetingMessage} {new string(' ', 20)} │");
         Console.WriteLine("└────────────────────────────────────────────────┘");
         Console.WriteLine();
         Console.ForegroundColor = ConsoleColor.DarkGray;
