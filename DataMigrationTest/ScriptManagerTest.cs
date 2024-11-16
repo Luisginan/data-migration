@@ -8,6 +8,32 @@ namespace DataMigrationTest;
 public class ScriptManagerTests
 {
     [Fact]
+    public void GetDiffScripts_DuplicateFileScript_ThrowsException()
+    {
+        var dbClientMock = new Mock<IDbClient>();
+        var scriptFileManagerMock = new Mock<IScriptFileManager>();
+
+        var historyScripts = new List<HistoryScript>
+        {
+            new() { ScriptName = "Script1", OrderNumber = 1, ScriptFileName = "Script1.sql" }
+        };
+        var fileScripts = new List<FileScript>
+        {
+            new() { ScriptName = "Script1", ScriptContent = "Content1", OrderNumber = 1, FileOrderNumber = 1, ScriptFileName = "1. Script1.sql", ScriptVersion = "1.0" },
+            new() { ScriptName = "Script1", ScriptContent = "Content1", OrderNumber = 1, FileOrderNumber = 1, ScriptFileName = "2. Script1.sql", ScriptVersion = "1.0" }
+        };
+
+        dbClientMock.Setup(x => x.GetHistoryScripts()).Returns(historyScripts);
+        scriptFileManagerMock.Setup(x => x.GetFileScripts(It.IsAny<int>())).Returns(fileScripts);
+
+        var scriptManager = new ScriptManager(dbClientMock.Object, scriptFileManagerMock.Object);
+
+        Assert.Throws<Exception>(() => scriptManager.GetDiffScripts());
+        var ex = Assert.Throws<Exception>(() => scriptManager.GetDiffScripts());
+        Assert.Equal("Duplicate script name: Script1 file name: 1. Script1.sql, 2. Script1.sql", ex.Message);
+    }
+    
+    [Fact]
     public void GetDiffScripts_ReturnsCorrectDiffScripts()
     {
         var dbClientMock = new Mock<IDbClient>();

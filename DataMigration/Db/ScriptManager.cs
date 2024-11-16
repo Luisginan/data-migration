@@ -10,6 +10,8 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
         var historyScripts = dbClient.GetHistoryScripts();
         var lastOrderNumber = historyScripts.Any() ? historyScripts.Max(x => x.OrderNumber) : 0;
         var fileScripts = scriptFileManager.GetFileScripts(lastOrderNumber);
+        ValidateFileScripts(fileScripts);
+        
         var listScriptDif = new List<ScriptData>();
         foreach (var fileScript in fileScripts)
         {
@@ -36,6 +38,17 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
         }
 
         return listScriptDif;
+    }
+
+    private void ValidateFileScripts(List<FileScript> fileScripts)
+    {
+        // throw if have same name
+        var listScriptName = fileScripts.Select(x => x.ScriptName).ToList();
+        var duplicateScriptName = listScriptName.GroupBy(x => x).Where(x => x.Count() > 1).Select(x => x.Key).ToList();
+        if (duplicateScriptName.Any())
+        {
+            throw new Exception($"Duplicate script name: {string.Join(", ", duplicateScriptName)} file name: {string.Join(", ", fileScripts.Where(x => duplicateScriptName.Contains(x.ScriptName)).Select(x => x.ScriptFileName))}");
+        }
     }
 
     public List<ScriptData> ExecuteAllScripts(List<ScriptData> listScriptDif)
