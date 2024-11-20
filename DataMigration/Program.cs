@@ -51,6 +51,10 @@ public class Program
         catch (Exception e)
         {
             DisplayError(e.Message);
+            if (isThrowError)
+            {
+                throw;
+            }
         }
         finally
         {

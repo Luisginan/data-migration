@@ -16,6 +16,12 @@ public partial class ScriptFileManager(Config config, IFileFolder fileFolder) : 
         
         foreach (var file in files)
         {
+            var orderNumber = int.Parse(fileFolder.GetFileName(file).Split(' ')[0].Replace('.', ' ').Trim());
+            if (orderNumber < config.MinimumOrderNumber)
+            {
+                continue;
+            }
+            
             if (!regex.IsMatch(fileFolder.GetFileName(file)))
                 throw new Exception($"File {file} have invalid format");
         }   
