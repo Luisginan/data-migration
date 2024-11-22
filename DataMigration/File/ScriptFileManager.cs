@@ -48,6 +48,6 @@ public partial class ScriptFileManager(Config config, IFileFolder fileFolder) : 
         return listFileScripts.OrderBy(x => x.FileOrderNumber).ToList();
     }
 
-    [GeneratedRegex(@"^\d+\.\s\w+\sV\d+\.\d+\.sql$")]
+    [GeneratedRegex(@"^\d+\.\s\w+(_\w+)*\sV\d+\.\d+\.\d+\.sql$")]
     private static partial Regex MyRegex();
 }

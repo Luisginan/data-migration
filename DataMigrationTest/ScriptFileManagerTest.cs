@@ -21,6 +21,22 @@ public class ScriptFileManagerTests
         Assert.NotEmpty(result);
         Assert.Equal("ScriptName", result[0].ScriptName);
     }
+    
+    [Fact]
+    public void GetFileScripts_3Digit_ReturnsCorrectScripts()
+    {
+        var config = new Config { PathScripts = "path/to/scripts", MinimumOrderNumber = 1 };
+        var fileFolder = new Mock<IFileFolder>();
+        fileFolder.Setup(x => x.GetFiles(It.IsAny<string>())).Returns(new[] { "1. ScriptName V1.2.1sql" });
+        fileFolder.Setup(x => x.ReadAllText(It.IsAny<string>())).Returns("ScriptContent");
+        fileFolder.Setup(x => x.GetFileName(It.IsAny<string>())).Returns("1. ScriptName V1.2.1.sql");
+        var scriptFileManager = new ScriptFileManager(config, fileFolder.Object);
+
+        var result = scriptFileManager.GetFileScripts(0);
+
+        Assert.NotEmpty(result);
+        Assert.Equal("ScriptName", result[0].ScriptName);
+    }
 
     [Fact]
     public void GetFileScripts_ThrowsExceptionForInvalidFileFormat()
