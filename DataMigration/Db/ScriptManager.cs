@@ -5,6 +5,24 @@ namespace OneLonDataMigration.Db;
 
 public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileManager) : IScriptManager
 {
+    public List<ScriptData> GetScriptFromDb(string version)
+    {
+        var historyScripts = dbClient.GetHistoryScriptsWithContent(version);
+        var listScriptData = new List<ScriptData>();
+        foreach (var historyScript in historyScripts)
+        {
+            listScriptData.Add(new ScriptData
+            {
+                ScriptName = historyScript.ScriptName,
+                FullName = historyScript.ScriptFileName,
+                OrderNumber = historyScript.OrderNumber,
+                ScriptContent = historyScript.ScriptContent,
+                Version = version
+            });
+        }
+
+        return listScriptData;
+    }
     public List<ScriptData> GetDiffScripts()
     {
         var historyScripts = dbClient.GetHistoryScripts();

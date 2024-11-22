@@ -21,4 +21,14 @@ public class FileFolder: IFileFolder
     {
         System.IO.File.WriteAllText(path, content);
     }
+
+    public bool IsFolderExists(string outputFolder)
+    {
+        return Directory.Exists(outputFolder);
+    }
+
+    public void CreateFolder(string outputFolder)
+    {
+        Directory.CreateDirectory(outputFolder);
+    }
 }

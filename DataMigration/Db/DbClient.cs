@@ -26,6 +26,27 @@ public class DbClientPostgres(Config config) : IDbClient
         }
         return historyScripts;
     }
+    
+    public List<HistoryScript> GetHistoryScriptsWithContent(string version) 
+    {
+        var historyScripts = new List<HistoryScript>();
+        using var connection = GetConnection();
+        connection.Open();
+        using var command = new NpgsqlCommand("SELECT order_number,script_name,script_content, script_file_name FROM script_history where script_version = @script_version", connection);
+        command.Parameters.AddWithValue("script_version", version);  
+        using var reader = command.ExecuteReader();
+        while (reader.Read())
+        {
+            historyScripts.Add(new HistoryScript
+            {
+                OrderNumber = reader.GetInt32(reader.GetOrdinal("order_number")),
+                ScriptName = reader.GetString(reader.GetOrdinal("script_name")),
+                ScriptFileName = reader.GetString(reader.GetOrdinal("script_file_name")),
+                ScriptContent = reader.GetString(reader.GetOrdinal("script_content"))
+            });
+        }
+        return historyScripts;
+    }
 
     private  NpgsqlConnection GetConnection()
     {

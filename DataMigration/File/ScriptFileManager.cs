@@ -48,6 +48,21 @@ public partial class ScriptFileManager(Config config, IFileFolder fileFolder) : 
         return listFileScripts.OrderBy(x => x.FileOrderNumber).ToList();
     }
 
-    [GeneratedRegex(@"^\d+\.\s\w+(_\w+)*\sV\d+\.\d+\.\d+\.sql$")]
+    public void SaveScript(ScriptData scriptData, string outputFolder)
+    {
+        fileFolder.WriteAllText($"{outputFolder}/{scriptData.FullName}", scriptData.ScriptContent);
+    }
+
+    public bool IsFolderExists(string outputFolder)
+    {
+       return fileFolder.IsFolderExists(outputFolder);
+    }
+
+    public void CreateFolder(string outputFolder)
+    {
+        fileFolder.CreateFolder(outputFolder);
+    }
+
+    [GeneratedRegex(@"^\d+\.\s\w+(_\w+)*\sV\d+(\.\d+)*\.sql$")]
     private static partial Regex MyRegex();
 }

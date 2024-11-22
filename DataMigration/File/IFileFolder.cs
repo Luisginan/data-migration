@@ -7,4 +7,6 @@ public interface IFileFolder
     
     string ReadAllText(string path);
     void WriteAllText(string path, string content);
+    bool IsFolderExists(string outputFolder);
+    void CreateFolder(string outputFolder);
 }

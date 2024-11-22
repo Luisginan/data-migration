@@ -20,6 +20,7 @@ public class Program
             }
 
             var isCheck = args.Length > 0 && args[0].ToLower() == "check";
+            var isExtract = args.Length > 0 && args[0].ToLower() == "extract";
             isThrowError = Array.Exists(args, arg => arg.ToLower() == "--throw-error");
             var isForce = Array.Exists(args, arg => arg.ToLower() == "--force");
 
@@ -38,6 +39,12 @@ public class Program
                 DisplayActionBanner("Checking Scripts");
                 var scriptChecker = new ScriptChecker(scriptManager, spinner);
                 scriptChecker.CheckAllScripts();
+            }
+            else if (isExtract)
+            {
+                DisplayActionBanner("Extracting Scripts");
+                var scriptExtractor = new ScriptExtractor(scriptManager, scriptFileManager, spinner);
+                scriptExtractor.ExtractScripts();
             }
             else
             {
