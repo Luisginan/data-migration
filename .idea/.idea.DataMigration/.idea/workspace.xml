@@ -7,19 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="support 3 digit version">
-      <change afterPath="$PROJECT_DIR$/DataMigration/ScriptExtractor.cs" afterDir="false" />
+    <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/IDbClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/IDbClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/IScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/IScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/FileFolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/FileFolder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/IFileFolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IFileFolder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/IScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/IScriptFileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Models/HistoryScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Models/HistoryScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/File/ScriptFileLogger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/1381d5ebd2ab1f292848d5b19b80cf71ac332508/src/libraries/System.Private.CoreLib/src/System/Collections/Generic/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/1381d5ebd2ab1f292848d5b19b80cf71ac332508/src/libraries/System.Private.CoreLib/src/System/Collections/Generic/List.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b05fc3ef644b7632d4481b3defa11634da02637d896cb5eca3eca7cf2f3ee3/String.Manipulation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/Db/DbClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/Db/IDbClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/Db/IScriptManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/Db/ScriptManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/File/FileFolder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/File/IFileFolder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/File/IScriptFileManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/File/ScriptFileManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/Models/HistoryScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Project/OneLonDataMigration/OneLonDataMigration/DataMigration/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -62,38 +44,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Check.executor": "Run",
-    ".NET Project.DataMigration.executor": "Run",
-    ".NET Project.check --throwError.executor": "Run",
-    ".NET Project.help.executor": "Run",
-    ".NET Project.run --force.executor": "Run",
-    ".NET Project.run extract.executor": "Run",
-    ".NET Project.run ol-query.executor": "Run",
-    ".NET Project.run.executor": "Run",
-    ".NET Project.throwError.executor": "Run",
-    "7d380965-f966-4bed-ba92-ec5109f2f73f.executor": "Debug",
-    "90c77fd8-6406-40de-8087-2b45bb786e30.executor": "Debug",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Publish to folder.Publish DataMigration to folder.executor": "Run",
-    "Publish to folder.Publish Linux.executor": "Run",
-    "Publish to folder.Publish Windows.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Check.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.DataMigration.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.check --throwError.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.help.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.run --force.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.run extract.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.run ol-query.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.run.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.throwError.executor&quot;: &quot;Run&quot;,
+    &quot;7d380965-f966-4bed-ba92-ec5109f2f73f.executor&quot;: &quot;Debug&quot;,
+    &quot;90c77fd8-6406-40de-8087-2b45bb786e30.executor&quot;: &quot;Debug&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Publish to folder.Publish DataMigration to folder.executor&quot;: &quot;Run&quot;,
+    &quot;Publish to folder.Publish Linux.executor&quot;: &quot;Run&quot;,
+    &quot;Publish to folder.Publish Windows.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.run extract">
+}</component>
+  <component name="RunManager" selected="Publish to folder.Publish Linux">
     <configuration name="table.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/DataMigration/table.sql" />
       <script-mode>FILE</script-mode>
@@ -274,7 +256,9 @@
       <workItem from="1731557934718" duration="1097000" />
       <workItem from="1731681106304" duration="10556000" />
       <workItem from="1732024452926" duration="3821000" />
-      <workItem from="1732247726949" duration="6866000" />
+      <workItem from="1732247726949" duration="7542000" />
+      <workItem from="1732286722627" duration="521000" />
+      <workItem from="1732317141860" duration="337000" />
     </task>
     <task id="LOCAL-00001" summary="fix ordering file">
       <option name="closed" value="true" />
@@ -380,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732248373592</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add fitur extract">
+      <option name="closed" value="true" />
+      <created>1732261318847</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732261318847</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +456,8 @@
     <MESSAGE value="check duplicatelocal script" />
     <MESSAGE value="skip validation if under minim order" />
     <MESSAGE value="support 3 digit version" />
-    <option name="LAST_COMMIT_MESSAGE" value="support 3 digit version" />
+    <MESSAGE value="add fitur extract" />
+    <option name="LAST_COMMIT_MESSAGE" value="add fitur extract" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -497,26 +490,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataMigration/Db/DbClient.cs</url>
-          <line>59</line>
+          <line>58</line>
           <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\Db\DbClient.cs" containingFunctionPresentation="Method 'GetConnection'">
             <startOffsets>
-              <option value="2535" />
+              <option value="2534" />
             </startOffsets>
             <endOffsets>
-              <option value="2582" />
+              <option value="2581" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataMigration/Db/DbClient.cs</url>
-          <line>64</line>
+          <line>63</line>
           <properties documentPath="D:\Project\OneLonDataMigration\OneLonDataMigration\DataMigration\Db\DbClient.cs" containingFunctionPresentation="Method 'ExecuteScript'">
             <startOffsets>
-              <option value="2649" />
+              <option value="2648" />
             </startOffsets>
             <endOffsets>
-              <option value="2688" />
+              <option value="2687" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

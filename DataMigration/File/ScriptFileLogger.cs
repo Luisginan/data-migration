@@ -8,9 +8,12 @@ public class ScriptFileLogger(Config config, IFileFolder fileFolder) : IScriptLo
 {
     public void LogScript(List<ScriptData> listScriptDif)
     {
-        var json = JsonConvert.SerializeObject(listScriptDif, Newtonsoft.Json.Formatting.Indented);
+        var json = JsonConvert.SerializeObject(listScriptDif, Formatting.Indented);
         var fileName = DateTime.Now.ToString("yyyyMMdd_HHmm");
-        fileFolder.WriteAllText($"script_log_{fileName}.json", json);
+        if (!fileFolder.IsFolderExists("log"))
+            fileFolder.CreateFolder("log");
+        
+        fileFolder.WriteAllText($"log/script_log_{fileName}.json", json);
     }
 
     
@@ -22,10 +25,13 @@ public class ScriptFileLogger(Config config, IFileFolder fileFolder) : IScriptLo
             contentListFileString.AppendLine($"{scriptData.FullName}");
         }
         
+        if (!fileFolder.IsFolderExists("log"))
+            fileFolder.CreateFolder("log");
+        
         var firstScript = listScriptDif.FirstOrDefault();
         var lastScript = listScriptDif.LastOrDefault();
         if (firstScript != null && lastScript != null)
-            fileFolder.WriteAllText($"script_changes_{firstScript.FileOrderNumber}-{lastScript.FileOrderNumber}.txt",
+            fileFolder.WriteAllText($"log/script_changes_{firstScript.FileOrderNumber}-{lastScript.FileOrderNumber}.txt",
                 contentListFileString.ToString());
         else
         {

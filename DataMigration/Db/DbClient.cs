@@ -6,7 +6,6 @@ namespace OneLonDataMigration.Db;
 
 public class DbClientPostgres(Config config) : IDbClient
 {
-
     private static string _connectionString = "";
     public List<HistoryScript> GetHistoryScripts()
     {
