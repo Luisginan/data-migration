@@ -23,6 +23,25 @@ public class ScriptManager(IDbClient dbClient, IScriptFileManager scriptFileMana
 
         return listScriptData;
     }
+
+    public List<ScriptData> FindScript(string file)
+    {
+        var historyScripts =dbClient.FindScript(file);
+        var listScriptData = new List<ScriptData>();
+        foreach (var historyScript in historyScripts)
+        {
+            listScriptData.Add(new ScriptData
+            {
+                ScriptName = historyScript.ScriptName,
+                FullName = historyScript.ScriptFileName,
+                OrderNumber = historyScript.OrderNumber,
+                ScriptContent = historyScript.ScriptContent
+            });
+        }
+        
+        return listScriptData; 
+    }
+
     public List<ScriptData> GetDiffScripts()
     {
         var historyScripts = dbClient.GetHistoryScripts();

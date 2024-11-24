@@ -82,5 +82,24 @@ public class DbClientPostgres(Config config) : IDbClient
         command.Parameters.AddWithValue("script_time", DateTime.Now);
         command.ExecuteNonQuery();
     }
-    
+
+    public List<HistoryScript> FindScript(string file)
+    {
+        var historyScripts = new List<HistoryScript>();
+        using var connection = GetConnection();
+        connection.Open();
+        using var command = new NpgsqlCommand("SELECT order_number, script_name, script_file_name FROM script_history WHERE script_file_name LIKE '%' || @script_file_name || '%'", connection);
+        command.Parameters.AddWithValue("script_file_name", file);
+        using var reader = command.ExecuteReader();
+        while (reader.Read())
+        {
+            historyScripts.Add(new HistoryScript
+            {
+                OrderNumber = reader.GetInt32(reader.GetOrdinal("order_number")),
+                ScriptName = reader.GetString(reader.GetOrdinal("script_name")),
+                ScriptFileName = reader.GetString(reader.GetOrdinal("script_file_name"))
+            });
+        }
+        return historyScripts;
+    }
 }

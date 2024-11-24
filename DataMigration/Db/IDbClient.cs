@@ -8,4 +8,5 @@ public interface IDbClient
     List<HistoryScript> GetHistoryScriptsWithContent(string version);
     void ExecuteScript(string scriptDataScriptContent);
     void InsertHistoryScript(ScriptData scriptData);
+    List<HistoryScript> FindScript(string file);
 }
