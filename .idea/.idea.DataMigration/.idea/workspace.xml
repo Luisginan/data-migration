@@ -8,13 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e48265ce-acb4-43a1-a53d-3f511038f911" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DataMigration/ScriptFinder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataMigration/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/DbClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/IDbClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/IDbClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/IScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/IScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Db/ScriptManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataMigration/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataMigration/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +73,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.run">
+  <component name="RunManager" selected="Publish to folder.Publish Linux">
     <configuration name="table.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/DataMigration/table.sql" />
       <script-mode>FILE</script-mode>
@@ -284,7 +278,8 @@
       <workItem from="1732317141860" duration="2304000" />
       <workItem from="1732381566755" duration="4533000" />
       <workItem from="1732407733364" duration="192000" />
-      <workItem from="1732407964287" duration="315000" />
+      <workItem from="1732407964287" duration="2222000" />
+      <workItem from="1732531209027" duration="941000" />
     </task>
     <task id="LOCAL-00001" summary="fix ordering file">
       <option name="closed" value="true" />
@@ -406,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732317495190</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fx ui">
+      <option name="closed" value="true" />
+      <created>1732408400269</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732408400269</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +495,8 @@
     <MESSAGE value="support 3 digit version" />
     <MESSAGE value="add fitur extract" />
     <MESSAGE value="save folder in folder log" />
-    <option name="LAST_COMMIT_MESSAGE" value="save folder in folder log" />
+    <MESSAGE value="fx ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="fx ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
